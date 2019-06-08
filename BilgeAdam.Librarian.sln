@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilgeAdam.Business", "Bilge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilgeAdam.DataTransferObjects", "BilgeAdam.DataTransferObjects\BilgeAdam.DataTransferObjects.csproj", "{9C1D9BAD-9438-42E7-B44C-266F732766AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilgeAdam.Enums", "BilgeAdam.Enums\BilgeAdam.Enums.csproj", "{05AFA501-4A99-4928-B580-09C2999C794F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9C1D9BAD-9438-42E7-B44C-266F732766AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C1D9BAD-9438-42E7-B44C-266F732766AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C1D9BAD-9438-42E7-B44C-266F732766AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05AFA501-4A99-4928-B580-09C2999C794F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AFA501-4A99-4928-B580-09C2999C794F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AFA501-4A99-4928-B580-09C2999C794F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AFA501-4A99-4928-B580-09C2999C794F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
