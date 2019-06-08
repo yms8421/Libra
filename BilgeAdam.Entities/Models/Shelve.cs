@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BilgeAdam.Core;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BilgeAdam.Entities.Models
 {
-    public class Shelve
+    [Table("Shelves")]
+    public class Shelve : EntityBase<string>
     {
+        [MaxLength(5)]
+        [Key]
+        public new string Id { get; set; }
     }
 }
