@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BilgeAdam.Entities.Context;
+using BilgeAdam.Entities.Models;
+using BilgeAdam.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,11 @@ namespace BilgeAdam.Client
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

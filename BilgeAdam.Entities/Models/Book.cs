@@ -15,5 +15,9 @@ namespace BilgeAdam.Entities.Models
         [MaxLength(20)]
         public string ISBNNumber { get; set; }
         public BookCategory Category { get; set; }
+        public int? AuthorId { get; set; }
+
+        [ForeignKey(nameof(AuthorId))]
+        public virtual Author Author { get; set; }
     }
 }
