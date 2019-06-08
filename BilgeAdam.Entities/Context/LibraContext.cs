@@ -14,10 +14,13 @@ namespace BilgeAdam.Entities.Context
             Database.SetInitializer(new CreateDatabaseIfNotExists<LibraContext>());
             base.OnModelCreating(modelBuilder);
         }
+
+
         public DbSet<Book> Books { get; set; }
         public DbSet<Shelve> Shelves { get; set; }
         public DbSet<Person> People { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
