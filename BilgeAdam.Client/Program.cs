@@ -17,6 +17,7 @@ namespace BilgeAdam.Client
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+            //Test
         }
     }
 }
