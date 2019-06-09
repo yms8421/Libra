@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using BilgeAdam.Entities.Context;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,19 @@ namespace BilgeAdam.Client
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            var f = new frmMain();
+            f.Show();
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

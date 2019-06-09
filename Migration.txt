@@ -3,5 +3,5 @@ Enable-Migrations
 -----------------------------
 
 add-migration -p BilgeAdam.Entities
-update-database -p BilgeAdam.Entities
+update-database -p BilgeAdam.Entities [-verbose]
 ---
