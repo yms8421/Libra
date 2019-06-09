@@ -33,28 +33,32 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chbActive = new System.Windows.Forms.CheckBox();
-            this.txtBookNum = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNumEx = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbAuthor = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtFiltetBookName = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.rbFilterA = new System.Windows.Forms.RadioButton();
-            this.rbFilterP = new System.Windows.Forms.RadioButton();
-            this.rbFilterT = new System.Windows.Forms.RadioButton();
             this.cbShelf = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.cbAuthor = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNumEx = new System.Windows.Forms.TextBox();
+            this.txtBookNum = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chbActive = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbFilterT = new System.Windows.Forms.RadioButton();
+            this.rbFilterP = new System.Windows.Forms.RadioButton();
+            this.rbFilterA = new System.Windows.Forms.RadioButton();
+            this.txtFiltetBookName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsOrUpt = new System.Windows.Forms.Button();
+            this.txtIbsnNo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,7 +81,7 @@
             // txtBookName
             // 
             this.txtBookName.Location = new System.Drawing.Point(71, 46);
-            this.txtBookName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBookName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBookName.Name = "txtBookName";
             this.txtBookName.Size = new System.Drawing.Size(182, 25);
             this.txtBookName.TabIndex = 1;
@@ -107,6 +111,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbCategory);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtIbsnNo);
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.btnClose);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnInsOrUpt);
@@ -129,57 +137,61 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bilgiler";
             // 
-            // label2
+            // cbShelf
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(4, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Kitap Id";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbShelf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbShelf.FormattingEnabled = true;
+            this.cbShelf.Location = new System.Drawing.Point(71, 152);
+            this.cbShelf.Name = "cbShelf";
+            this.cbShelf.Size = new System.Drawing.Size(182, 25);
+            this.cbShelf.TabIndex = 14;
             // 
-            // txtId
+            // label8
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(71, 20);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(96, 25);
-            this.txtId.TabIndex = 3;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Location = new System.Drawing.Point(4, 152);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 25);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Raf Bilgi";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // cbAuthor
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(169, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Durum";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbAuthor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAuthor.FormattingEnabled = true;
+            this.cbAuthor.Location = new System.Drawing.Point(71, 125);
+            this.cbAuthor.Name = "cbAuthor";
+            this.cbAuthor.Size = new System.Drawing.Size(182, 25);
+            this.cbAuthor.TabIndex = 12;
             // 
-            // chbActive
+            // label6
             // 
-            this.chbActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chbActive.Location = new System.Drawing.Point(237, 20);
-            this.chbActive.Name = "chbActive";
-            this.chbActive.Size = new System.Drawing.Size(18, 25);
-            this.chbActive.TabIndex = 5;
-            this.chbActive.UseVisualStyleBackColor = true;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Location = new System.Drawing.Point(4, 125);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Yazar";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtBookNum
+            // groupBox3
             // 
-            this.txtBookNum.Location = new System.Drawing.Point(82, 21);
-            this.txtBookNum.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBookNum.Multiline = true;
-            this.txtBookNum.Name = "txtBookNum";
-            this.txtBookNum.Size = new System.Drawing.Size(41, 37);
-            this.txtBookNum.TabIndex = 7;
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.txtNumEx);
+            this.groupBox3.Controls.Add(this.txtBookNum);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Location = new System.Drawing.Point(6, 376);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(247, 65);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Emanet Bilgileri";
             // 
             // label4
             // 
@@ -205,6 +217,15 @@
             this.txtNumEx.Size = new System.Drawing.Size(41, 37);
             this.txtNumEx.TabIndex = 9;
             // 
+            // txtBookNum
+            // 
+            this.txtBookNum.Location = new System.Drawing.Point(82, 21);
+            this.txtBookNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBookNum.Multiline = true;
+            this.txtBookNum.Name = "txtBookNum";
+            this.txtBookNum.Size = new System.Drawing.Size(41, 37);
+            this.txtBookNum.TabIndex = 7;
+            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Crimson;
@@ -218,39 +239,48 @@
             this.label5.Text = "Kitap Emanet";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // groupBox3
+            // chbActive
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtNumEx);
-            this.groupBox3.Controls.Add(this.txtBookNum);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(6, 376);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(247, 65);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Emanet Bilgileri";
+            this.chbActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chbActive.Location = new System.Drawing.Point(237, 20);
+            this.chbActive.Name = "chbActive";
+            this.chbActive.Size = new System.Drawing.Size(18, 25);
+            this.chbActive.TabIndex = 5;
+            this.chbActive.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // label3
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(4, 72);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Yazar";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(169, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Durum";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbAuthor
+            // txtId
             // 
-            this.cbAuthor.FormattingEnabled = true;
-            this.cbAuthor.Location = new System.Drawing.Point(71, 72);
-            this.cbAuthor.Name = "cbAuthor";
-            this.cbAuthor.Size = new System.Drawing.Size(182, 25);
-            this.cbAuthor.TabIndex = 12;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(71, 20);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(96, 25);
+            this.txtId.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(4, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Kitap Id";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox4
             // 
@@ -267,6 +297,45 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ara";
+            // 
+            // rbFilterT
+            // 
+            this.rbFilterT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbFilterT.AutoSize = true;
+            this.rbFilterT.ForeColor = System.Drawing.Color.Blue;
+            this.rbFilterT.Location = new System.Drawing.Point(498, 20);
+            this.rbFilterT.Name = "rbFilterT";
+            this.rbFilterT.Size = new System.Drawing.Size(60, 21);
+            this.rbFilterT.TabIndex = 17;
+            this.rbFilterT.TabStop = true;
+            this.rbFilterT.Text = "Tümü";
+            this.rbFilterT.UseVisualStyleBackColor = true;
+            // 
+            // rbFilterP
+            // 
+            this.rbFilterP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbFilterP.AutoSize = true;
+            this.rbFilterP.ForeColor = System.Drawing.Color.Red;
+            this.rbFilterP.Location = new System.Drawing.Point(438, 20);
+            this.rbFilterP.Name = "rbFilterP";
+            this.rbFilterP.Size = new System.Drawing.Size(54, 21);
+            this.rbFilterP.TabIndex = 16;
+            this.rbFilterP.TabStop = true;
+            this.rbFilterP.Text = "Pasif";
+            this.rbFilterP.UseVisualStyleBackColor = true;
+            // 
+            // rbFilterA
+            // 
+            this.rbFilterA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbFilterA.AutoSize = true;
+            this.rbFilterA.ForeColor = System.Drawing.Color.Green;
+            this.rbFilterA.Location = new System.Drawing.Point(378, 20);
+            this.rbFilterA.Name = "rbFilterA";
+            this.rbFilterA.Size = new System.Drawing.Size(54, 21);
+            this.rbFilterA.TabIndex = 15;
+            this.rbFilterA.TabStop = true;
+            this.rbFilterA.Text = "Aktif";
+            this.rbFilterA.UseVisualStyleBackColor = true;
             // 
             // txtFiltetBookName
             // 
@@ -289,65 +358,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Kitap Adı";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // rbFilterA
-            // 
-            this.rbFilterA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbFilterA.AutoSize = true;
-            this.rbFilterA.ForeColor = System.Drawing.Color.Green;
-            this.rbFilterA.Location = new System.Drawing.Point(378, 20);
-            this.rbFilterA.Name = "rbFilterA";
-            this.rbFilterA.Size = new System.Drawing.Size(54, 21);
-            this.rbFilterA.TabIndex = 15;
-            this.rbFilterA.TabStop = true;
-            this.rbFilterA.Text = "Aktif";
-            this.rbFilterA.UseVisualStyleBackColor = true;
-            // 
-            // rbFilterP
-            // 
-            this.rbFilterP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbFilterP.AutoSize = true;
-            this.rbFilterP.ForeColor = System.Drawing.Color.Red;
-            this.rbFilterP.Location = new System.Drawing.Point(438, 20);
-            this.rbFilterP.Name = "rbFilterP";
-            this.rbFilterP.Size = new System.Drawing.Size(54, 21);
-            this.rbFilterP.TabIndex = 16;
-            this.rbFilterP.TabStop = true;
-            this.rbFilterP.Text = "Pasif";
-            this.rbFilterP.UseVisualStyleBackColor = true;
-            // 
-            // rbFilterT
-            // 
-            this.rbFilterT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbFilterT.AutoSize = true;
-            this.rbFilterT.ForeColor = System.Drawing.Color.Blue;
-            this.rbFilterT.Location = new System.Drawing.Point(498, 20);
-            this.rbFilterT.Name = "rbFilterT";
-            this.rbFilterT.Size = new System.Drawing.Size(60, 21);
-            this.rbFilterT.TabIndex = 17;
-            this.rbFilterT.TabStop = true;
-            this.rbFilterT.Text = "Tümü";
-            this.rbFilterT.UseVisualStyleBackColor = true;
-            // 
-            // cbShelf
-            // 
-            this.cbShelf.FormattingEnabled = true;
-            this.cbShelf.Location = new System.Drawing.Point(71, 99);
-            this.cbShelf.Name = "cbShelf";
-            this.cbShelf.Size = new System.Drawing.Size(182, 25);
-            this.cbShelf.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(4, 99);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 25);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Raf Bilgi";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnClose
             // 
@@ -387,6 +397,47 @@
             this.btnInsOrUpt.Text = "Kayıt";
             this.btnInsOrUpt.UseVisualStyleBackColor = false;
             // 
+            // txtIbsnNo
+            // 
+            this.txtIbsnNo.Location = new System.Drawing.Point(71, 72);
+            this.txtIbsnNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIbsnNo.Name = "txtIbsnNo";
+            this.txtIbsnNo.Size = new System.Drawing.Size(182, 25);
+            this.txtIbsnNo.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Location = new System.Drawing.Point(4, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 25);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "IBSN No";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(71, 98);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(182, 25);
+            this.cbCategory.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Location = new System.Drawing.Point(4, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 25);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Kategori";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -396,7 +447,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBooks";
             this.Text = "Kitap Kartları";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
@@ -440,5 +491,9 @@
         private System.Windows.Forms.RadioButton rbFilterA;
         private System.Windows.Forms.TextBox txtFiltetBookName;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIbsnNo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.Label label10;
     }
 }
