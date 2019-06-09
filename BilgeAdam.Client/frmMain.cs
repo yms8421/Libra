@@ -78,5 +78,10 @@ namespace BilgeAdam.Client
             //yeniden çalışacaktır. Daha önce zaten instance'ı alınmış bir formun tekrar instance'ını almadan
             //dolayısı ile bu method çalışırken dictionary'den "silmeden"; daha önce alınmış instance'ı çağırınız 
         }
+
+        private void tsBookCard_Click(object sender, EventArgs e)
+        {
+            Open<frmBooks>();
+        }
     }
 }

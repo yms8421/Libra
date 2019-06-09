@@ -133,6 +133,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BilgeAdam.Business\BilgeAdam.Business.csproj">
+      <Project>{1EAB493F-A672-4058-AEA6-BA6448DFC605}</Project>
+      <Name>BilgeAdam.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BilgeAdam.DataTransferObjects\BilgeAdam.DataTransferObjects.csproj">
+      <Project>{9C1D9BAD-9438-42E7-B44C-266F732766AD}</Project>
+      <Name>BilgeAdam.DataTransferObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BilgeAdam.Entities\BilgeAdam.Entities.csproj">
       <Project>{B8B3D17C-EB4B-43F0-873D-BCF90301542C}</Project>
       <Name>BilgeAdam.Entities</Name>

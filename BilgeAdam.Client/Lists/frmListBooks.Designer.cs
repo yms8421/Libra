@@ -30,10 +30,14 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
+            this.cbActive = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIbsnNo = new System.Windows.Forms.TextBox();
@@ -44,12 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBookName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.cbActive = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
+            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -82,13 +85,56 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listeler";
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(543, 401);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 25);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "0 / 1";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(505, 400);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 26);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "<<";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(586, 400);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 26);
+            this.button1.TabIndex = 35;
+            this.button1.Text = ">>";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgcName,
+            this.dgcAuthor,
+            this.dgcCode});
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgv.Location = new System.Drawing.Point(3, 18);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(623, 408);
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(623, 376);
             this.dgv.TabIndex = 2;
             // 
             // groupBox2
@@ -117,31 +163,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kriterler";
             // 
-            // btnClose
+            // cbActive
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClose.Image = global::BilgeAdam.Client.Properties.Resources.close_16;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(176, 374);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 43);
-            this.btnClose.TabIndex = 17;
-            this.btnClose.Text = "Kapat";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.cbActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbActive.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbActive.FormattingEnabled = true;
+            this.cbActive.Location = new System.Drawing.Point(71, 179);
+            this.cbActive.Name = "cbActive";
+            this.cbActive.Size = new System.Drawing.Size(182, 25);
+            this.cbActive.TabIndex = 34;
             // 
-            // btnList
+            // label3
             // 
-            this.btnList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnList.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnList.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnList.Image = global::BilgeAdam.Client.Properties.Resources.report_32;
-            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.Location = new System.Drawing.Point(7, 374);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(108, 43);
-            this.btnList.TabIndex = 15;
-            this.btnList.Text = "Listele";
-            this.btnList.UseVisualStyleBackColor = false;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(4, 179);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 25);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Durum";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtId.Location = new System.Drawing.Point(71, 20);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(182, 25);
+            this.txtId.TabIndex = 32;
             // 
             // cbCategory
             // 
@@ -251,70 +302,52 @@
             this.label1.Text = "Kitap Adı";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtId
+            // btnClose
             // 
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtId.Location = new System.Drawing.Point(71, 20);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(182, 25);
-            this.txtId.TabIndex = 32;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.Image = global::BilgeAdam.Client.Properties.Resources.close_16;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(176, 374);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(84, 43);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Kapat";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // cbActive
+            // btnList
             // 
-            this.cbActive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbActive.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbActive.FormattingEnabled = true;
-            this.cbActive.Location = new System.Drawing.Point(71, 179);
-            this.cbActive.Name = "cbActive";
-            this.cbActive.Size = new System.Drawing.Size(182, 25);
-            this.cbActive.TabIndex = 34;
+            this.btnList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnList.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnList.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnList.Image = global::BilgeAdam.Client.Properties.Resources.report_32;
+            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList.Location = new System.Drawing.Point(7, 374);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(108, 43);
+            this.btnList.TabIndex = 15;
+            this.btnList.Text = "Listele";
+            this.btnList.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // dgcName
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(4, 179);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 25);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Durum";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dgcName.DataPropertyName = "Name";
+            this.dgcName.HeaderText = "Kitap Adı";
+            this.dgcName.Name = "dgcName";
+            this.dgcName.ReadOnly = true;
             // 
-            // button1
+            // dgcAuthor
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(586, 400);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = ">>";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dgcAuthor.DataPropertyName = "Author";
+            this.dgcAuthor.HeaderText = "Yazar";
+            this.dgcAuthor.Name = "dgcAuthor";
+            this.dgcAuthor.ReadOnly = true;
             // 
-            // button2
+            // dgcCode
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(505, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "<<";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(543, 401);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 19);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "0 / 1";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dgcCode.DataPropertyName = "Code";
+            this.dgcCode.HeaderText = "ISBN Numarası";
+            this.dgcCode.Name = "dgcCode";
+            this.dgcCode.ReadOnly = true;
             // 
             // frmListBooks
             // 
@@ -326,6 +359,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Name = "frmListBooks";
             this.Text = ".:: Kitap Listesi";
+            this.Load += new System.EventHandler(this.frmListBooks_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -357,5 +391,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgcCode;
     }
 }
