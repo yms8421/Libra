@@ -1,5 +1,6 @@
 ﻿using BilgeAdam.Client.Cards;
 using BilgeAdam.Client.Definitions;
+using BilgeAdam.Client.Lists;
 using BilgeAdam.Entities.Context;
 using BilgeAdam.Entities.Models;
 using BilgeAdam.Enums;
@@ -38,7 +39,7 @@ namespace BilgeAdam.Client
 
         private void msbBookList_Click(object sender, EventArgs e)
         {
-            Open<frmBooks>();
+            Open<frmListBooks>();
         }
 
         private void tsAuthor_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@
             this.rbFilterT = new System.Windows.Forms.RadioButton();
             this.rbFilterP = new System.Windows.Forms.RadioButton();
             this.rbFilterA = new System.Windows.Forms.RadioButton();
-            this.txtFiltetBookName = new System.Windows.Forms.TextBox();
+            this.txtFiltetName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chbActive = new System.Windows.Forms.CheckBox();
@@ -41,11 +41,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtAuthorName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsOrUpt = new System.Windows.Forms.Button();
+            this.txtAuthorName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -91,15 +91,15 @@
             this.rbFilterA.Text = "Aktif";
             this.rbFilterA.UseVisualStyleBackColor = true;
             // 
-            // txtFiltetBookName
+            // txtFiltetName
             // 
-            this.txtFiltetBookName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtFiltetName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltetBookName.Location = new System.Drawing.Point(72, 18);
-            this.txtFiltetBookName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFiltetBookName.Name = "txtFiltetBookName";
-            this.txtFiltetBookName.Size = new System.Drawing.Size(114, 20);
-            this.txtFiltetBookName.TabIndex = 14;
+            this.txtFiltetName.Location = new System.Drawing.Point(72, 18);
+            this.txtFiltetName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFiltetName.Name = "txtFiltetName";
+            this.txtFiltetName.Size = new System.Drawing.Size(114, 20);
+            this.txtFiltetName.TabIndex = 14;
             // 
             // label7
             // 
@@ -110,7 +110,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Kitap Adı";
+            this.label7.Text = "Yazar Adı";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox4
@@ -119,7 +119,7 @@
             this.groupBox4.Controls.Add(this.rbFilterT);
             this.groupBox4.Controls.Add(this.rbFilterP);
             this.groupBox4.Controls.Add(this.rbFilterA);
-            this.groupBox4.Controls.Add(this.txtFiltetBookName);
+            this.groupBox4.Controls.Add(this.txtFiltetName);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Location = new System.Drawing.Point(257, 0);
@@ -214,26 +214,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bilgiler";
             // 
-            // txtAuthorName
-            // 
-            this.txtAuthorName.Location = new System.Drawing.Point(71, 44);
-            this.txtAuthorName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAuthorName.Name = "txtAuthorName";
-            this.txtAuthorName.Size = new System.Drawing.Size(182, 20);
-            this.txtAuthorName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(4, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Yazar Adı";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -272,6 +252,26 @@
             this.btnInsOrUpt.Text = "Kayıt";
             this.btnInsOrUpt.UseVisualStyleBackColor = false;
             // 
+            // txtAuthorName
+            // 
+            this.txtAuthorName.Location = new System.Drawing.Point(71, 44);
+            this.txtAuthorName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAuthorName.Name = "txtAuthorName";
+            this.txtAuthorName.Size = new System.Drawing.Size(182, 20);
+            this.txtAuthorName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(4, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Yazar Adı";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.RadioButton rbFilterT;
         private System.Windows.Forms.RadioButton rbFilterP;
         private System.Windows.Forms.RadioButton rbFilterA;
-        private System.Windows.Forms.TextBox txtFiltetBookName;
+        private System.Windows.Forms.TextBox txtFiltetName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnDelete;
