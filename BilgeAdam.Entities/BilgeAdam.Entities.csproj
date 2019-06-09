@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201906081055457_AuthorTable.Designer.cs">
       <DependentUpon>201906081055457_AuthorTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906090721225_UserEntity.cs" />
+    <Compile Include="Migrations\201906090721225_UserEntity.Designer.cs">
+      <DependentUpon>201906090721225_UserEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
@@ -76,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906081055457_AuthorTable.resx">
       <DependentUpon>201906081055457_AuthorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906090721225_UserEntity.resx">
+      <DependentUpon>201906090721225_UserEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -36,14 +36,13 @@
             this.tsBookCard = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPeopleCard = new System.Windows.Forms.ToolStripMenuItem();
             this.tsList = new System.Windows.Forms.ToolStripMenuItem();
-            this.kitapListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.msbBookList = new System.Windows.Forms.ToolStripMenuItem();
             this.okuyucuListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emanetKitaplarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tanımlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsAuthor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.tsSchool = new System.Windows.Forms.ToolStripMenuItem();
-            this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsBookShelf = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -62,34 +61,32 @@
             // 
             // tslblUserFullName
             // 
-            this.tslblUserFullName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.tslblUserFullName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tslblUserFullName.ForeColor = System.Drawing.Color.Coral;
             this.tslblUserFullName.Image = global::BilgeAdam.Client.Properties.Resources.user_16;
             this.tslblUserFullName.Name = "tslblUserFullName";
-            this.tslblUserFullName.Size = new System.Drawing.Size(68, 17);
+            this.tslblUserFullName.Size = new System.Drawing.Size(65, 17);
             this.tslblUserFullName.Text = "UserFull";
             // 
             // tslblTime
             // 
-            this.tslblTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.tslblTime.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tslblTime.ForeColor = System.Drawing.Color.Crimson;
             this.tslblTime.Image = global::BilgeAdam.Client.Properties.Resources.date_go;
             this.tslblTime.Name = "tslblTime";
-            this.tslblTime.Size = new System.Drawing.Size(51, 17);
+            this.tslblTime.Size = new System.Drawing.Size(50, 17);
             this.tslblTime.Text = "Time";
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuStrip.GripMargin = new System.Windows.Forms.Padding(3, 3, 0, 5);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBookCard,
             this.tsPeopleCard,
             this.tsList,
-            this.tanımlarToolStripMenuItem,
-            this.çıkışToolStripMenuItem});
+            this.tanımlarToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(800, 40);
@@ -100,33 +97,34 @@
             // 
             this.tsBookCard.Image = global::BilgeAdam.Client.Properties.Resources.addres_book;
             this.tsBookCard.Name = "tsBookCard";
-            this.tsBookCard.Size = new System.Drawing.Size(124, 36);
+            this.tsBookCard.Size = new System.Drawing.Size(118, 36);
             this.tsBookCard.Text = "Kitap Kartları";
             // 
             // tsPeopleCard
             // 
             this.tsPeopleCard.Image = global::BilgeAdam.Client.Properties.Resources.Excellence_Folder___Users;
             this.tsPeopleCard.Name = "tsPeopleCard";
-            this.tsPeopleCard.Size = new System.Drawing.Size(117, 36);
+            this.tsPeopleCard.Size = new System.Drawing.Size(111, 36);
             this.tsPeopleCard.Text = "Üye Kartları";
             // 
             // tsList
             // 
             this.tsList.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kitapListesiToolStripMenuItem,
+            this.msbBookList,
             this.okuyucuListesiToolStripMenuItem,
             this.emanetKitaplarToolStripMenuItem});
             this.tsList.Image = global::BilgeAdam.Client.Properties.Resources.report_32;
             this.tsList.Name = "tsList";
-            this.tsList.Size = new System.Drawing.Size(92, 36);
+            this.tsList.Size = new System.Drawing.Size(88, 36);
             this.tsList.Text = "Listeler";
             // 
-            // kitapListesiToolStripMenuItem
+            // msbBookList
             // 
-            this.kitapListesiToolStripMenuItem.Image = global::BilgeAdam.Client.Properties.Resources.text_list_bullets;
-            this.kitapListesiToolStripMenuItem.Name = "kitapListesiToolStripMenuItem";
-            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.kitapListesiToolStripMenuItem.Text = "Kitap Listesi";
+            this.msbBookList.Image = global::BilgeAdam.Client.Properties.Resources.text_list_bullets;
+            this.msbBookList.Name = "msbBookList";
+            this.msbBookList.Size = new System.Drawing.Size(196, 38);
+            this.msbBookList.Text = "Kitap Listesi";
+            this.msbBookList.Click += new System.EventHandler(this.msbBookList_Click);
             // 
             // okuyucuListesiToolStripMenuItem
             // 
@@ -151,7 +149,7 @@
             this.tsBookShelf});
             this.tanımlarToolStripMenuItem.Image = global::BilgeAdam.Client.Properties.Resources.Add_Folder;
             this.tanımlarToolStripMenuItem.Name = "tanımlarToolStripMenuItem";
-            this.tanımlarToolStripMenuItem.Size = new System.Drawing.Size(98, 36);
+            this.tanımlarToolStripMenuItem.Size = new System.Drawing.Size(97, 36);
             this.tanımlarToolStripMenuItem.Text = "Tanımlar";
             // 
             // tsAuthor
@@ -160,6 +158,7 @@
             this.tsAuthor.Name = "tsAuthor";
             this.tsAuthor.Size = new System.Drawing.Size(196, 38);
             this.tsAuthor.Text = "Yazar Tanım";
+            this.tsAuthor.Click += new System.EventHandler(this.tsAuthor_Click);
             // 
             // tsGroup
             // 
@@ -175,15 +174,6 @@
             this.tsSchool.Size = new System.Drawing.Size(196, 38);
             this.tsSchool.Text = "Okul Tanım";
             // 
-            // çıkışToolStripMenuItem
-            // 
-            this.çıkışToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.çıkışToolStripMenuItem.Image = global::BilgeAdam.Client.Properties.Resources.exit;
-            this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 36);
-            this.çıkışToolStripMenuItem.Text = "Çıkış";
-            this.çıkışToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            // 
             // tsBookShelf
             // 
             this.tsBookShelf.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
@@ -195,7 +185,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BilgeAdam.Client.Properties.Resources.Back_Photo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip);
@@ -228,8 +217,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsList;
         private System.Windows.Forms.ToolStripMenuItem tanımlarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsAuthor;
-        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kitapListesiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem msbBookList;
         private System.Windows.Forms.ToolStripMenuItem okuyucuListesiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emanetKitaplarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsGroup;
