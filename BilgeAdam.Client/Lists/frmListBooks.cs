@@ -1,4 +1,6 @@
 ﻿using BilgeAdam.Business.Repositories;
+using BilgeAdam.Entities.Models;
+using BilgeAdam.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,7 @@ namespace BilgeAdam.Client.Lists
         {
             InitializeComponent();
             Repo = new BookRepository();
+            RepoAuthor = new AuthorRepository();
             this.FormClosed += FrmListBooks_FormClosed;
         }
 
@@ -26,10 +29,26 @@ namespace BilgeAdam.Client.Lists
         }
 
         public BookRepository Repo { get; set; }
+        public AuthorRepository RepoAuthor { get; set; }
         private void frmListBooks_Load(object sender, EventArgs e)
         {
+
             dgv.AutoGenerateColumns = false;
-            dgv.DataSource = Repo.GetAll();
+            dgv.DataSource = Repo.GetAllParametre(test());
+            cbAuthor.DataSource = RepoAuthor.GetCombobox();
+            cbCategory.DataSource = Enum.GetValues(typeof(BookCategory));
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+
+            dgv.DataSource = Repo.GetAllParametre(test());
+        }
+
+        private object  test()
+        {
+            
+            return txtBookName.Text;
         }
     }
 }

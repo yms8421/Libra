@@ -34,6 +34,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbActive = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
-            this.dgcName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -136,6 +136,27 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(623, 376);
             this.dgv.TabIndex = 2;
+            // 
+            // dgcName
+            // 
+            this.dgcName.DataPropertyName = "Name";
+            this.dgcName.HeaderText = "Kitap Adı";
+            this.dgcName.Name = "dgcName";
+            this.dgcName.ReadOnly = true;
+            // 
+            // dgcAuthor
+            // 
+            this.dgcAuthor.DataPropertyName = "Author";
+            this.dgcAuthor.HeaderText = "Yazar";
+            this.dgcAuthor.Name = "dgcAuthor";
+            this.dgcAuthor.ReadOnly = true;
+            // 
+            // dgcCode
+            // 
+            this.dgcCode.DataPropertyName = "Code";
+            this.dgcCode.HeaderText = "ISBN Numarası";
+            this.dgcCode.Name = "dgcCode";
+            this.dgcCode.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -261,6 +282,7 @@
             // 
             // cbAuthor
             // 
+            this.cbAuthor.DisplayMember = "Name";
             this.cbAuthor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAuthor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbAuthor.FormattingEnabled = true;
@@ -268,6 +290,7 @@
             this.cbAuthor.Name = "cbAuthor";
             this.cbAuthor.Size = new System.Drawing.Size(182, 25);
             this.cbAuthor.TabIndex = 25;
+            this.cbAuthor.ValueMember = "Id";
             // 
             // label6
             // 
@@ -327,27 +350,7 @@
             this.btnList.TabIndex = 15;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = false;
-            // 
-            // dgcName
-            // 
-            this.dgcName.DataPropertyName = "Name";
-            this.dgcName.HeaderText = "Kitap Adı";
-            this.dgcName.Name = "dgcName";
-            this.dgcName.ReadOnly = true;
-            // 
-            // dgcAuthor
-            // 
-            this.dgcAuthor.DataPropertyName = "Author";
-            this.dgcAuthor.HeaderText = "Yazar";
-            this.dgcAuthor.Name = "dgcAuthor";
-            this.dgcAuthor.ReadOnly = true;
-            // 
-            // dgcCode
-            // 
-            this.dgcCode.DataPropertyName = "Code";
-            this.dgcCode.HeaderText = "ISBN Numarası";
-            this.dgcCode.Name = "dgcCode";
-            this.dgcCode.ReadOnly = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // frmListBooks
             // 

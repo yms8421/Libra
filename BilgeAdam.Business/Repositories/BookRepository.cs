@@ -40,6 +40,27 @@ namespace BilgeAdam.Business.Repositories
             return books;
         }
 
+        public List<BookDTO> GetAllParametre(object Value)
+        {
+            //Obje Olarak Alına Veriler . Listelemeden Kullanılacak.
+            var books = Context.Books.Where(i => i.IsActive)
+                      .Select(i => new BookDTO
+                      {
+                          Id = i.Id,
+                          Created = i.Created,
+                          Code = i.ISBNNumber,
+                          Name = i.Name,
+                          Author = i.Author.FullName
+                      })
+                      .ToList();
+            return books;
+        }
+
+        public List<BookDTO> GetCombobox()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(BookDTO item)
         {
             throw new NotImplementedException();
