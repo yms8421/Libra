@@ -99,6 +99,7 @@
             this.tsBookCard.Name = "tsBookCard";
             this.tsBookCard.Size = new System.Drawing.Size(118, 36);
             this.tsBookCard.Text = "Kitap Kartları";
+            this.tsBookCard.Click += new System.EventHandler(this.tsBookCard_Click);
             // 
             // tsPeopleCard
             // 
@@ -122,7 +123,7 @@
             // 
             this.msbBookList.Image = global::BilgeAdam.Client.Properties.Resources.text_list_bullets;
             this.msbBookList.Name = "msbBookList";
-            this.msbBookList.Size = new System.Drawing.Size(196, 38);
+            this.msbBookList.Size = new System.Drawing.Size(173, 38);
             this.msbBookList.Text = "Kitap Listesi";
             this.msbBookList.Click += new System.EventHandler(this.msbBookList_Click);
             // 
@@ -130,14 +131,14 @@
             // 
             this.okuyucuListesiToolStripMenuItem.Image = global::BilgeAdam.Client.Properties.Resources.text_list_bullets;
             this.okuyucuListesiToolStripMenuItem.Name = "okuyucuListesiToolStripMenuItem";
-            this.okuyucuListesiToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.okuyucuListesiToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.okuyucuListesiToolStripMenuItem.Text = "Okuyucu Listesi";
             // 
             // emanetKitaplarToolStripMenuItem
             // 
             this.emanetKitaplarToolStripMenuItem.Image = global::BilgeAdam.Client.Properties.Resources.text_list_bullets;
             this.emanetKitaplarToolStripMenuItem.Name = "emanetKitaplarToolStripMenuItem";
-            this.emanetKitaplarToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.emanetKitaplarToolStripMenuItem.Size = new System.Drawing.Size(173, 38);
             this.emanetKitaplarToolStripMenuItem.Text = "Emanet Kitaplar";
             // 
             // tanımlarToolStripMenuItem
@@ -156,7 +157,7 @@
             // 
             this.tsAuthor.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
             this.tsAuthor.Name = "tsAuthor";
-            this.tsAuthor.Size = new System.Drawing.Size(196, 38);
+            this.tsAuthor.Size = new System.Drawing.Size(173, 38);
             this.tsAuthor.Text = "Yazar Tanım";
             this.tsAuthor.Click += new System.EventHandler(this.tsAuthor_Click);
             // 
@@ -164,21 +165,21 @@
             // 
             this.tsGroup.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
             this.tsGroup.Name = "tsGroup";
-            this.tsGroup.Size = new System.Drawing.Size(196, 38);
+            this.tsGroup.Size = new System.Drawing.Size(173, 38);
             this.tsGroup.Text = "Grup Tanım";
             // 
             // tsSchool
             // 
             this.tsSchool.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
             this.tsSchool.Name = "tsSchool";
-            this.tsSchool.Size = new System.Drawing.Size(196, 38);
+            this.tsSchool.Size = new System.Drawing.Size(173, 38);
             this.tsSchool.Text = "Okul Tanım";
             // 
             // tsBookShelf
             // 
             this.tsBookShelf.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
             this.tsBookShelf.Name = "tsBookShelf";
-            this.tsBookShelf.Size = new System.Drawing.Size(196, 38);
+            this.tsBookShelf.Size = new System.Drawing.Size(173, 38);
             this.tsBookShelf.Text = "Kitap Raf Tanım";
             // 
             // frmMain

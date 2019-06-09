@@ -33,6 +33,13 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtIbsnNo = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnInsOrUpt = new System.Windows.Forms.Button();
             this.cbShelf = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbAuthor = new System.Windows.Forms.ComboBox();
@@ -52,13 +59,6 @@
             this.rbFilterA = new System.Windows.Forms.RadioButton();
             this.txtFiltetBookName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnInsOrUpt = new System.Windows.Forms.Button();
-            this.txtIbsnNo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -136,6 +136,86 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bilgiler";
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(71, 98);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(182, 25);
+            this.cbCategory.TabIndex = 21;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Location = new System.Drawing.Point(4, 98);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 25);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Kategori";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtIbsnNo
+            // 
+            this.txtIbsnNo.Location = new System.Drawing.Point(71, 72);
+            this.txtIbsnNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIbsnNo.Name = "txtIbsnNo";
+            this.txtIbsnNo.Size = new System.Drawing.Size(182, 25);
+            this.txtIbsnNo.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Location = new System.Drawing.Point(4, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 25);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "IBSN No";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.Image = global::BilgeAdam.Client.Properties.Resources.close_16;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(169, 445);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(84, 43);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "Kapat";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDelete.BackColor = System.Drawing.Color.Pink;
+            this.btnDelete.Image = global::BilgeAdam.Client.Properties.Resources.delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(76, 445);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(68, 43);
+            this.btnDelete.TabIndex = 16;
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnInsOrUpt
+            // 
+            this.btnInsOrUpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnInsOrUpt.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnInsOrUpt.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
+            this.btnInsOrUpt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsOrUpt.Location = new System.Drawing.Point(7, 445);
+            this.btnInsOrUpt.Name = "btnInsOrUpt";
+            this.btnInsOrUpt.Size = new System.Drawing.Size(68, 43);
+            this.btnInsOrUpt.TabIndex = 15;
+            this.btnInsOrUpt.Text = "Kayıt";
+            this.btnInsOrUpt.UseVisualStyleBackColor = false;
+            this.btnInsOrUpt.Click += new System.EventHandler(this.btnInsOrUpt_Click);
             // 
             // cbShelf
             // 
@@ -358,85 +438,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Kitap Adı";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnClose.Image = global::BilgeAdam.Client.Properties.Resources.close_16;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(169, 445);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 43);
-            this.btnClose.TabIndex = 17;
-            this.btnClose.Text = "Kapat";
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDelete.BackColor = System.Drawing.Color.Pink;
-            this.btnDelete.Image = global::BilgeAdam.Client.Properties.Resources.delete;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(76, 445);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(68, 43);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Sil";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnInsOrUpt
-            // 
-            this.btnInsOrUpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnInsOrUpt.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnInsOrUpt.Image = global::BilgeAdam.Client.Properties.Resources.add_16;
-            this.btnInsOrUpt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsOrUpt.Location = new System.Drawing.Point(7, 445);
-            this.btnInsOrUpt.Name = "btnInsOrUpt";
-            this.btnInsOrUpt.Size = new System.Drawing.Size(68, 43);
-            this.btnInsOrUpt.TabIndex = 15;
-            this.btnInsOrUpt.Text = "Kayıt";
-            this.btnInsOrUpt.UseVisualStyleBackColor = false;
-            // 
-            // txtIbsnNo
-            // 
-            this.txtIbsnNo.Location = new System.Drawing.Point(71, 72);
-            this.txtIbsnNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIbsnNo.Name = "txtIbsnNo";
-            this.txtIbsnNo.Size = new System.Drawing.Size(182, 25);
-            this.txtIbsnNo.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(4, 72);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 25);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "IBSN No";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(71, 98);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(182, 25);
-            this.cbCategory.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(4, 98);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 25);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Kategori";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmBooks
             // 
